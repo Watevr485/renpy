@@ -1,0 +1,15 @@
+label start:
+    "I've been thinking about changing my name."
+
+    # Prompt the player to enter a name and store it in the 'player_name' variable.
+    $ player_name = renpy.input("What is your name, Magical Boy?")
+
+    # Remove any accidental leading or trailing spaces from the input.
+    $ player_name = player_name.strip()
+
+    # Set a default name if the player didn't enter anything.
+    if player_name == "":
+        $ player_name = "Shuji"
+
+    # Use the chosen name in dialogue.
+    e "Pleased to meet you, %(player_name)s!"
